@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta name="viewport" content="user-scalable=no">
+    		<script language="javascript">
+	    		 var isMove = 1;
+	             var pagePos = 0;
+	             var startTime;
+	             var timer;
+	             var isScrolling = false;
+	             var isScrollingOnTouchstart = false;
+				  document.ontouchstart = function(e)
+                  {
+                      isMove = 1;
+                      isScrollingOnTouchstart = isScrolling;
+                      startTime = (new Date()).getTime();
+                      document.documentElement.style.webkitTapHighlightColor = "rgba(1,1,1,1)";/*webkit api*/
+                      if (isMove == 1 && isScrollingOnTouchstart == false)
+                      {
+                         var target = e.target;
+                          
+                          if (target.tagName.toLowerCase() == "img")
+                          {
+                              target.className = 'visited';
+                              setTimeout(function(){target.className = '';},1000);
+                          }
+                      }
+                  };
+                  document.ontouchend = function(e)
+                  {
+                      var last = ( new Date() ).getTime() - startTime;
+                      var target = e.target;
+                      var tempTarget;
+                      
+                      // 长按忽略
+                      if( last > 500 )
+                      {
+                          return;
+                      }
+                      
+                      // e.target returns the text node in iOS 4.3 when you click text and then e.target.tagName returns undefined.
+                      while( target.nodeType == 3 )
+                      {
+                          target = target.parentNode;
+                      }
+                      
+                      if (isMove == 1 && isScrollingOnTouchstart == false)
+                      {
+                          if (target.tagName.toLowerCase() == "img")
+                          {
+//                               var pos = target.getBoundingClientRect();
+//                               var top = pos.top;
+//                               var left = pos.left;
+//                               var width = pos.width;
+//                               var height = pos.height;
+								var src = target.getAttribute('src');
+								var width = target.getAttribute('width');
+								var height = target.getAttribute('height');
+                              
+                              //document.location = '?SNImgTag=' + target.id + '&top=' + top + '&left=' + left + '&width=' + width + '&height=' + height;
+                              window.location.href = "img-tap://" + '<img src=\"' + src + '\" width=\"' + width + '\" height=\"' + height + '\" alt=\"IMG_0\">';
+                          }
+                      }
+                  };
+                </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="editor" contentEditable="true"></div>
+<script type="text/javascript" src="rich_editor.js"></script>
+</body>
+</html>

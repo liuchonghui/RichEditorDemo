@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">richeditor-android</string>
+    <string name="title_activity_main">RichEditor Demo</string>
+    <string name="page_home">jp.wasabeef.sample.MainActivity</string>
+</resources>

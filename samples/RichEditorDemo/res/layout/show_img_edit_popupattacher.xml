@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/transparent" >
+
+    <RelativeLayout
+        android:id="@+id/popup_animation_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="26dp"
+        android:background="@drawable/pop_bg"
+        android:padding="20dp" >
+
+        <RelativeLayout
+            android:id="@+id/popup_middle_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff" >
+
+            <RelativeLayout
+                android:id="@+id/popup_window_frontside"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/pop_window_frontside_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="要删除该图片吗？"
+                    android:textColor="#474747"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:id="@+id/pop_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pop_window_frontside_title"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp" >
+
+                    <Button
+                        android:id="@+id/pop_button_cancel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_bg_middle_selector"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="10dp"
+                        android:singleLine="true"
+                        android:text="取消"
+                        android:textColor="#ffffff"
+                        android:textSize="16sp"
+                        android:textStyle="normal"
+                        android:visibility="visible" />
+                    
+                    <View android:layout_width="10dp"
+                        android:layout_height="10dp"/>
+
+                    <Button
+                        android:id="@+id/pop_button_confirm"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_bg_middle_selector"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="10dp"
+                        android:text="确定"
+                        android:textColor="#ffffff"
+                        android:textSize="16sp"
+                        android:textStyle="normal"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!-- <RelativeLayout -->
+        <!-- android:id="@+id/signrule_close" -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:layout_alignParentRight="true" -->
+        <!-- android:layout_alignParentTop="true" -->
+        <!-- android:layout_centerVertical="true" -->
+        <!-- android:layout_marginRight="0dp" > -->
+
+
+        <!-- <LinearLayout -->
+        <!-- android:id="@+id/signrule_close_content" -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:gravity="center_horizontal|center_vertical" -->
+        <!-- android:orientation="vertical" > -->
+
+
+        <!-- <ImageView -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:layout_alignParentRight="true" -->
+        <!-- android:layout_centerVertical="true" -->
+        <!-- android:background="@drawable/alter_close_icon" -->
+        <!-- android:clickable="true" -->
+        <!-- android:contentDescription="@null" -->
+        <!-- android:paddingBottom="@dimen/title_bar_bottom_range" -->
+        <!-- android:paddingLeft="@dimen/title_bar_otherside_range" -->
+        <!-- android:paddingRight="@dimen/title_bar_side_range" -->
+        <!-- android:paddingTop="@dimen/title_bar_top_range" /> -->
+        <!-- </LinearLayout> -->
+
+
+        <!-- <RelativeLayout -->
+        <!-- android:id="@+id/signrule_close_selector" -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:layout_alignBottom="@+id/signrule_close_content" -->
+        <!-- android:layout_alignLeft="@+id/signrule_close_content" -->
+        <!-- android:layout_alignRight="@+id/signrule_close_content" -->
+        <!-- android:layout_alignTop="@+id/signrule_close_content" -->
+        <!-- android:background="@drawable/live_hot_item_selector" -->
+        <!-- android:clickable="true" > -->
+        <!-- </RelativeLayout> -->
+        <!-- </RelativeLayout> -->
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,3 @@
+include ':samples:RichEditorDemo'
+include ':RichEditor'
+

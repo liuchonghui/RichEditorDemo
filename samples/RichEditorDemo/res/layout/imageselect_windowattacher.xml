@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#88000000" >
+
+    <RelativeLayout
+        android:id="@+id/popup_animation_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/transparent" >
+        
+        <View
+            android:id="@+id/top_blank"
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+        
+        <TextView
+            android:id="@+id/picture"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top_blank"
+            android:background="@drawable/slt_as_ios7_other_bt_top"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="从照片选取"
+            android:textColor="#1E82FF"
+            android:textSize="15sp" />
+        
+        <TextView
+            android:id="@+id/shoting"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/picture"
+            android:background="@drawable/slt_as_ios7_other_bt_bottom"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="拍照"
+            android:textColor="#1E82FF"
+            android:textSize="15sp" />
+        
+        <View
+            android:id="@+id/middle_blank"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/shoting"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/middle_blank"
+            android:background="@drawable/slt_as_ios7_cancel_bt"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="取消"
+            android:textColor="#686868"
+            android:textSize="15sp" />
+
+        <View
+            android:id="@+id/bottom_blank"
+            android:layout_below="@+id/cancel"
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+    </RelativeLayout>
+
+</RelativeLayout>
